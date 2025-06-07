@@ -1,0 +1,136 @@
+/* Basic styling for the entire body */
+body {
+    font-family: Arial, sans-serif; /* Change the font */
+    margin: 20px; /* Add space around the content */
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text color */
+    line-height: 1.6;
+  
+}
+body{
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPgllOF1PyKUZWfJDtfYwKaJbemD0MeoKiEA&s');
+}
+/* Style for headings */
+h1 {
+    color: #FFD700; /* Gold as initial/fallback color for a shiny start */
+    text-align: center; /* Center the main heading */
+    margin-bottom: 30px;
+    text-decoration: underline;
+
+    /* --- COMBINED ANIMATIONS --- */
+    opacity: 0; /* Start invisible for fadeInSlideUp */
+    transform: translateY(20px); /* Start slightly below for fadeInSlideUp */
+
+    animation:
+        fadeInSlideUp 1s ease-out forwards, /* Entry animation */
+        colorCycle 5s infinite alternate 1s ease-in-out; /* Color animation, starts after 1s delay */
+}
+
+/* Keyframes for the Fade In and Slide Up animation (unchanged) */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at its natural position */
+    }
+}
+
+/* Keyframes for the Color Cycle animation - NOW WITH SHINING COLORS */
+@keyframes colorCycle {
+    0% {
+        color: #FFD700; /* Gold */
+    }
+    25% {
+        color: #00FFFF; /* Aqua/Cyan */
+    }
+    50% {
+        color: #FF1493; /* Deep Pink */
+    }
+    75% {
+        color: #32CD32; /* Lime Green */
+    }
+    100% {
+        color: #FFD700; /* Back to Gold */
+    }
+}
+h2 {
+    color: #007bff; /* A slightly lighter blue */
+    border-bottom: 2px solid #007bff; /* A blue line under the heading */
+    padding-bottom: 5px; /* Space between text and the line */
+    margin-top: 40px; /* Space above the heading */
+}
+
+/* Style for paragraphs */
+p {
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+/* Style for images */
+img {
+    max-width: 100%; /* Ensures image doesn't overflow its container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Makes image a block element so margin: auto works */
+    margin: 20px auto; /* Center the image and add vertical space */
+    border: 3px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+figcaption {
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+            padding: 0 10px;
+            font-size:24px;
+            text-align:center;
+            text-decoration: underline; /* Add some horizontal padding to the caption */
+        }
+
+/* Style for links */
+a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none; /* Remove underline */
+}
+  a:hover {
+  background-color: yellow;
+}
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style for the unordered list */
+ul {
+    list-style-type: disc; /* Default bullet points */
+    margin-left: 20px; /* Indent the list */
+    background-color: #e9ecef; /* Light background for the list */
+    padding: 15px; /* Padding inside the list container */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+li {
+    margin-bottom: 8px; /* Space between list items */
+}
+ #myButton {
+            background-color: #ff001e; /* Blue background for the button */
+            color: white; /* White text color for the button */
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+ #myButton:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+        }
+        footer {
+    display: flex;
+    justify-content: center; /* Horizontally centers content */
+    align-items: center;    /* Vertically centers content if the footer has a defined height */
+    }
